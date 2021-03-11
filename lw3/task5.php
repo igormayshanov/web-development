@@ -6,15 +6,23 @@ First Name: <name>
 Last Name: ...
 Email: <email>
 Age: 30 */
-$lines = file("data\\igor1452@mail.ru.txt");
-foreach($lines as $value)
+function getGETParameter(string $parameter) : ?string
 {
-    if (empty($value))
-    {
-        $value = ' ';
-    }
+    return isset($_GET[$parameter]) ? (string)$_GET[$parameter] : null;
 }
-echo "First Name: $lines[0] <br>";
-echo "Last Name:  $lines[1] <br>";
-echo "Email: $lines[2] <br>";
-echo "Age: $lines[3] <br>";
+$email = getGETParameter('email');
+$filename = $email . ".txt";
+if ($email !== null)
+{
+    $lines = file("data\\$filename");
+    foreach($lines as $value)
+    {
+        if (empty($value))
+        {
+            $value = ' ';
+        }
+}
+echo "First Name: $lines[0] <br />";
+echo "Last Name:  $lines[1] <br />";
+echo "Email: $lines[2] <br />";
+echo "Age: $lines[3] <br />";
