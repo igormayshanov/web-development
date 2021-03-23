@@ -102,15 +102,32 @@ h6 {
     max-width: 1920;
     max-height: 1271;
     margin: 10;
+    background-color: #ffffff;
 }
+
+.page_body {
+    width: 960;
+}
+
+.page__header {}
+
+.page__content {}
+
+.page__sidebar {}
+
+.page__about {}
+
+.page__footer {}
 
 .page-header {
     width: 960;
+    height: 350;
 }
 
 .page-header__foto {
     width: 330px;
     height: 350px;
+    border-radius: 5px;
     background-color: #132d36;
     float: left;
 }
@@ -119,16 +136,20 @@ h6 {
     clear: both;
 }
 
-.page-header__quote {}
-
-.quote {
-    width: 502;
+.page-header__quote {
     float: right;
 }
 
+.clear {
+    clear: both;
+}
+
+.quote {
+    width: 502;
+}
+
 .quote__icon {
-    width: 130;
-    background-color: #d43131;
+    background-color: #f5f5f5;
 }
 
 .quote__text {
@@ -147,9 +168,7 @@ h6 {
     font-family: Open Sans, sans-serif;
 }
 
-.sidebar {
-    width: 247;
-}
+.sidebar {}
 
 .sidebar__list {
     font-size: 19px;
@@ -178,11 +197,11 @@ h6 {
     font-family: Open Sans, sans-serif;
 }
 
-.content {
+.about {
     width: 570;
 }
 
-.content__title {
+.about__title {
     font-size: 48px;
     line-height: 42px;
     color: #333333;
@@ -190,26 +209,21 @@ h6 {
     font-family: Open Sans, sans-serif;
 }
 
-.content__line {
-    content: hr;
-    align: right;
-    background-color: #45c3aa;
+.about__title::after {
     width: 60px;
-    margin: 20px 0;
-    padding: 0;
     height: 6px;
-    border: #45c3aa;
     border-radius: 3px;
+    background-color: #45c3aa;
 }
 
-.content__text {
+.about__text {
     font-size: 19px;
     line-height: 32px;
     color: #555555;
     font-family: Georgia, sans-serif;
 }
 
-.content__subtitle {
+.about__subtitle {
     font-size: 36px;
     line-height: 42px;
     color: #333333;
@@ -217,7 +231,7 @@ h6 {
     font-family: Open Sans, sans-serif;
 }
 
-.content__footer {
+.link {
     width: 562px;
     height: 263px;
     font-size: 19px;
@@ -226,10 +240,10 @@ h6 {
     font-family: Georgia;
 }
 
-.content__footer ::after {
+.link::after {
     content: '\2192';
 }
 
-.content__footer :hover {
+.link:hover {
     color: #098d72;
 }
