@@ -101,37 +101,38 @@ h6 {
 .page {
     max-width: 1920;
     max-height: 1271;
-    margin: 10;
 }
 
 .page-header {
-    width: 960;
+    max-width: 960;
+    display: inline;
+}
+
+.page-header:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 .page-header__foto {
     width: 330px;
     height: 350px;
-    background-color: #132d36;
+    border-radius: 5px;
     float: left;
 }
 
-.clear {
-    clear: both;
-}
-
-.page-header__quote {}
-
 .quote {
-    width: 502;
+    max-width: 502;
     float: right;
 }
 
 .quote__icon {
-    width: 130;
+    max-width: 130;
     background-color: #d43131;
 }
 
 .quote__text {
+    max-width: 444;
     font-size: 28px;
     line-height: 42px;
     color: #848484;
@@ -140,6 +141,7 @@ h6 {
 }
 
 .quote__author {
+    width: 204;
     font-size: 16px;
     line-height: 42px;
     color: #333333;
@@ -149,6 +151,7 @@ h6 {
 
 .sidebar {
     width: 247;
+    clear: both;
 }
 
 .sidebar__list {
@@ -191,7 +194,6 @@ h6 {
 }
 
 .content__line {
-    content: hr;
     align: right;
     background-color: #45c3aa;
     width: 60px;
