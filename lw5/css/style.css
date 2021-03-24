@@ -89,18 +89,20 @@ img[alt="photo"] {
     line-height: 36px;
     color: #555555;
     font-family: Georgia;
-    padding-left: 20px;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin: 0 0 60px 0;
 }
 
 .sidebar__list_marker {
     list-style: disc, outside;
     color: black;
+    margin: 1em 0 1em 0;
+    padding-inline-start: 20px;
 }
 
 .sidebar__list_number {
     list-style: decimal, outside;
+    margin: 1em 0 1em 0;
+    padding-inline-start: 20px;
 }
 
 .sidebar__title {
@@ -109,6 +111,7 @@ img[alt="photo"] {
     color: #15a98c;
     font-weight: 600;
     font-family: Open Sans, sans-serif;
+    margin 0 0 30px 0;
 }
 
 .content {
@@ -134,7 +137,7 @@ img[alt="photo"] {
     align: right;
     background-color: #45c3aa;
     width: 60px;
-    margin: 20px 0;
+    margin: 34px 0 53px 0;
     padding: 0;
     height: 6px;
     border: #45c3aa;
@@ -155,6 +158,7 @@ img[alt="photo"] {
     color: #333333;
     font-weight: 400;
     font-family: Open Sans, sans-serif;
+    margin: 55px 0 33px 0;
 }
 
 .content__footer {
@@ -164,6 +168,7 @@ img[alt="photo"] {
     line-height: 32px;
     color: #15a98b;
     font-family: Georgia;
+    margin: 57px 0 0 0;
 }
 
 .content__footer ::after {
