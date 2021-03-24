@@ -1,111 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
-
-/*Обнуление*/
-
-
-/*
-* {
+{
     padding: 0;
     margin: 0;
     border: 0;
 }
 
-*,
-*:before,
-*:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-}
-
-:focus,
- :active {
-    outline: none;
-}
-
-a:focus,
-a:active {
-    outline: none;
-}
-
-nav,
-footer,
-header,
-aside {
-    display: block;
-}
-
-html,
-body {
-    height: 100%;
-    width: 100%;
-    font-size: 100%;
-    line-height: 1;
-    font-size: 14px;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-}
-
-input,
-button,
-textarea {
-    font-family: inherit;
-}
-
-input::-ms-clear {
-    display: none;
-}
-
-button {
-    cursor: pointer;
-}
-
-button::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-}
-
-a,
-a:visited {
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: none;
-}
-
-ul li {
-    list-style: none;
-}
-
-img {
-    vertical-align: top;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-size: inherit;
-    font-weight: inherit;
-}
-
-*/
-
-
-/*--------------------*/
-
 .page {
-    max-width: 1920;
-    max-height: 1271;
+    max-width: 1000px;
+    padding: 0 20px 0 20px;
 }
 
 .page-header {
-    max-width: 960;
-    display: inline;
+    width: 960px;
+    margin-bottom: 50px;
 }
 
 .page-header:after {
@@ -116,32 +23,50 @@ h6 {
 
 .page-header__foto {
     width: 330px;
-    height: 350px;
-    border-radius: 5px;
+    height: 351px;
+    margin-right: 60px;
     float: left;
 }
 
+img[alt="photo"] {
+    border-radius: 5px;
+}
+
 .quote {
-    max-width: 502;
+    width: 570px;
+    height: 351px;
+    background: url("img/quotes.png") left 0 top 51px no-repeat;
+    background-size: 130px 87px;
     float: right;
 }
 
+.quote:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .quote__icon {
-    max-width: 130;
-    background-color: #d43131;
+    width: 130px;
+    height: 87px;
+    padding-top: 51px;
 }
 
 .quote__text {
-    max-width: 444;
+    width: 444px;
+    padding: 130px 0 0 58px;
     font-size: 28px;
     line-height: 42px;
     color: #848484;
     font-style: italic;
     font-family: Georgia, sans-serif;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
 }
 
 .quote__author {
-    width: 204;
     font-size: 16px;
     line-height: 42px;
     color: #333333;
@@ -149,9 +74,14 @@ h6 {
     font-family: Open Sans, sans-serif;
 }
 
+.page-content {
+    width: 960px;
+}
+
 .sidebar {
-    width: 247;
-    clear: both;
+    width: 330px;
+    margin-right: 60px;
+    float: left;
 }
 
 .sidebar__list {
@@ -183,6 +113,13 @@ h6 {
 
 .content {
     width: 570;
+    float: right;
+}
+
+.content:after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .content__title {
@@ -205,6 +142,7 @@ h6 {
 }
 
 .content__text {
+    width: 555px;
     font-size: 19px;
     line-height: 32px;
     color: #555555;
