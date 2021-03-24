@@ -6,27 +6,26 @@
 //			    | <идентификатор><буква>
 //			    | <идентификатор><цифра> "#^[a-zA-Z0-9]+$#"
 
-  function getGETParametr(string $identifier):?string
-  {
-    return isset($_GET[$identifier])?(string)$_GET[$identifier]:null;
-  }
-  $identifier = getGETParametr('identifier');
-  if (preg_match("/^\d/", $identifier)) 
-  {
+function getGETParameter(string $identifier) : ?string
+{
+    return isset($_GET[$identifier]) ? (string)$_GET[$identifier] : null;
+}
+$identifier = getGETParameter('identifier');
+if (preg_match("/^\d/", $identifier)) 
+{
     echo 'No, identifier begins with a number';
-  }
-  else
-  {
-  if (preg_match("#^[a-zA-Z0-9]+$#", $identifier)) 
+}
+else
+{
+    if (preg_match("#^[a-zA-Z0-9]#", $identifier)) 
     {
-      echo "Yes";
+        echo "Yes";
     }
 	else
     {
-      echo "No, identifier contains an invalid character";
+        echo "No, identifier contains an invalid character";
     }  
-	
-  }  
+}  
   
   
   

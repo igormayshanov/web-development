@@ -21,8 +21,13 @@ if ($email !== null)
         {
             $value = ' ';
         }
+    }
+    echo "First Name: $lines[0] <br />";
+    echo "Last Name:  $lines[1] <br />";
+    echo "Email: $lines[2] <br />";
+    echo "Age: $lines[3] <br />";
 }
-echo "First Name: $lines[0] <br />";
-echo "Last Name:  $lines[1] <br />";
-echo "Email: $lines[2] <br />";
-echo "Age: $lines[3] <br />";
+else
+{
+   echo "Не введен e-mail!";
+}	

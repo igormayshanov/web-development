@@ -12,13 +12,13 @@
 ●	 За каждый повторяющийся символ в пароле вычитается количество повторяющихся символов
 Например: abcd1a, вычитаем -2 поскольку символ a встречается дважды. Программа должна выводить на экран надежность пароля в виде числа.*/
 
- function getGETParametr(string $password):?string
-  {
-    return isset($_GET[$password])?(string)$_GET[$password]:null;
-  }
-  $password = getGETParametr('password');
-  if(preg_match("/^[a-zA-Z0-9]+$/", $password) == 1) 
-  {
+function getGETParameter(string $password) : ?string
+{
+    return isset($_GET[$password]) ? (string)$_GET[$password] : null;
+}
+$password = getGETParameter('password');
+if(preg_match("/^[a-zA-Z0-9]+$/", $password) == 1) 
+{
     $len = strlen($password);
 	$digits = preg_match_all("/[0-9]/", $password);
 	$smallLetters = preg_match_all("/[a-z]/", $password);
@@ -28,23 +28,22 @@
 	echo "кол-во символов в нижнем регистре $smallLetters <br />";
 	echo "кол-во символов в верхнем регистре $bigLetters <br />";
 	$repeatChars = 0;
-	foreach (count_chars($password, 1) as $i => $val) 
+	foreach (count_chars($password, 1) as $val) 
 	{
-		if ($val > 1)
+	    if ($val > 1)
 		{
-			$repeatChars = $repeatChars + $val; 
+		    $repeatChars = $repeatChars + $val; 
 		}
     }
 	echo "количество повторяющихся символов $repeatChars <br />";
-	$pasStrength = ((4 * $len) + (4 * $digits) + (($len - $bigLetters) * 2) 
-	+ (($len - $smallLetters) * 2) - $repeatChars);
+	$pasStrength = ((4 * $len) + (4 * $digits) + (($len - $bigLetters) * 2)	+ (($len - $smallLetters) * 2) - $repeatChars);
 	if ($digits == 0)
 	{
 		$pasStrength = $pasStrength - $len;
 	}
-	if ($smallLetters + $bigLetters == 0)
+	if ($smallLetters + $bigLetters === 0)
 	{
-		$pasStrength = $pasStrength - $len;
+	    $pasStrength = $pasStrength - $len;
 	}
-	echo "Сложность пароля $pasStrength <br />";
-  }
+    echo "Сложность пароля $pasStrength <br />";
+}
