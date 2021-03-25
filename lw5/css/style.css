@@ -1,17 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
 .page {
     max-width: 1000px;
+    width: 100%;
     padding: 0 20px 0 20px;
 }
 
 .page-header {
-    width: 960px;
-    margin-bottom: 50px;
+    max-width: 960px;
+    width: 100%;
+    margin-bottom: 45px;
 }
 
 .page-header:after {
     content: "";
-    display: table;
+    display: block;
     clear: both;
 }
 
@@ -27,8 +35,10 @@ img[alt="photo"] {
 }
 
 .quote {
-    width: 570px;
-    height: 351px;
+    max-width: 570px;
+    max-height: 350px;
+    width: 100%;
+    height: 100%;
     background: url("img/quotes.png") left 0 top 51px no-repeat;
     background-size: 130px 87px;
     float: right;
@@ -37,7 +47,7 @@ img[alt="photo"] {
 .quote:after {
     content: "";
     display: block;
-    clear: both;
+    clear: right;
 }
 
 .quote__icon {
@@ -48,23 +58,21 @@ img[alt="photo"] {
 
 .quote__text {
     width: 444px;
-    padding: 130px 0 0 58px;
+    padding: 120px 0 0 60px;
     font-size: 28px;
     line-height: 42px;
     color: #848484;
     font-style: italic;
     font-family: Georgia, sans-serif;
-    margin-block-start: 0;
-    margin-block-end: 0;
-    margin-inline-start: 0;
-    margin-inline-end: 0;
 }
 
 .quote__author {
     font-size: 16px;
     line-height: 42px;
+    padding: 0 0 0 5px;
     color: #333333;
     font-weight: 600;
+    font-style: normal;
     font-family: Open Sans, sans-serif;
 }
 
@@ -72,51 +80,60 @@ img[alt="photo"] {
     width: 960px;
 }
 
+.page-content:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
 .sidebar {
-    width: 330px;
-    margin-right: 60px;
+    max-width: 330px;
+    width: 100%;
+    margin-right: 30px;
     float: left;
 }
 
-.sidebar__list {
-    font-size: 19px;
-    line-height: 36px;
-    color: #555555;
-    font-family: Georgia;
-    margin: 0 0 60px 0;
+.sidebar:after {
+    content: "";
+    display: block;
+    clear: left;
 }
 
 .sidebar__list_marker {
-    list-style: disc, outside;
+    font-size: 19px;
+    line-height: 36px;
+    font-family: Georgia;
+    padding: 0 0 35px 0;
     color: black;
-    margin: 1em 0 1em 0;
-    padding-inline-start: 20px;
+    padding: 12px 0 37px 0;
+    padding-inline-start: 23px;
 }
 
 .sidebar__list_number {
-    list-style: decimal, outside;
-    margin: 1em 0 1em 0;
+    font-size: 19px;
+    line-height: 36px;
+    font-family: Georgia;
+    padding: 13px 0 37px 0;
     padding-inline-start: 20px;
 }
 
 .sidebar__title {
     font-size: 24px;
-    line-height: 32px;
     color: #15a98c;
     font-weight: 600;
     font-family: Open Sans, sans-serif;
-    margin: 0 0 30px 0;
 }
 
 .content {
-    width: 570;
+    max-width: 570px;
+    width: 100%;
     float: right;
 }
 
 .content:after {
     content: "";
     display: block;
-    clear: both;
+    clear: right;
 }
 
 .content__title {
@@ -125,24 +142,34 @@ img[alt="photo"] {
     color: #333333;
     font-weight: 700;
     font-family: Open Sans, sans-serif;
+    padding-left: 5px;
 }
 
 .content__line {
     background-color: #45c3aa;
     width: 60px;
-    margin: 34px 0 53px 0;
+    margin: 30px 0 45px 0;
     padding: 0;
     height: 6px;
     border: #45c3aa;
     border-radius: 3px;
 }
 
-.content__text {
+.content__text_508 {
+    width: 508px;
+    font-size: 19px;
+    line-height: 32px;
+    color: #555555;
+    font-family: Georgia, sans-serif;
+}
+
+.content__text_555 {
     width: 555px;
     font-size: 19px;
     line-height: 32px;
     color: #555555;
     font-family: Georgia, sans-serif;
+    padding: 0 0 43px 0;
 }
 
 .content__subtitle {
@@ -151,23 +178,21 @@ img[alt="photo"] {
     color: #333333;
     font-weight: 400;
     font-family: Open Sans, sans-serif;
-    margin: 55px 0 33px 0;
+    margin: 40px 0 15px 0;
 }
 
-.content__footer {
-    width: 562px;
-    height: 263px;
+.content__link {
     font-size: 19px;
     line-height: 32px;
     color: #15a98b;
     font-family: Georgia;
-    margin: 57px 0 0 0;
 }
 
-.content__footer ::after {
+.content__link::after {
+    text-decoration: none;
     content: '\2192';
 }
 
-.content__footer :hover {
+.content__link:hover {
     color: #098d72;
 }
