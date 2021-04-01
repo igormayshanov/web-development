@@ -8,7 +8,7 @@
 .page {
     max-width: 1000px;
     width: 100%;
-    padding: 0 20px 0 20px;
+    margin: 0 auto;
 }
 
 .page-header {
@@ -169,7 +169,7 @@ img[alt="photo"] {
     line-height: 32px;
     color: #555555;
     font-family: Georgia, sans-serif;
-    padding: 0 0 43px 0;
+    padding: 0 0 50px 0;
 }
 
 .content__subtitle {
@@ -181,18 +181,21 @@ img[alt="photo"] {
     margin: 40px 0 15px 0;
 }
 
-.content__link {
+.Link {
     font-size: 19px;
-    line-height: 32px;
     color: #15a98b;
     font-family: Georgia;
 }
 
-.content__link::after {
-    text-decoration: none;
-    content: '\2192';
+.Link:hover {
+    color: #098d72;
 }
 
-.content__link:hover {
+.Link__write-me {
+    text-decoration: underline;
+    color: #15a98b;
+}
+
+.Link__write-me:hover {
     color: #098d72;
 }
