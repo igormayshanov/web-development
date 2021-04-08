@@ -53,6 +53,12 @@
     background-color: #15a98c;
 }
 
+.navigation__link_active
+{
+    color: #f5f5f5;
+    background-color: #15a98c;
+}
+
 i 
 {
     padding-right: 10px;
