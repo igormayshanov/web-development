@@ -137,28 +137,38 @@
             </p>
           </div>
         </div>
-        <a class="columns__button" href="#">Все фильмы</a>
+        <button class="columns__button button" href="#">
+          Все фильмы
+        </button>
       </div>
       <form class="form" action="">
         <h2 class="form__title">
           НАПИШИ МНЕ
         </h2>
-        <h3 class="form__subtitle">
-          Ваше имя
-        </h3>
-        <input class="form__item" type="text" name="first-name" placeholder="Имя">
-        <h3 class="form__subtitle">
-          Ваш email
-        </h3>
-        <input class="form__item" type="text" name="email" placeholder="Email">
+        <div class="form__item">
+          <h3 class="form__subtitle form__subtitle_snowflake">
+            Ваше имя
+          </h3>
+          <input class="form__field" type="text" name="first-name" placeholder=" " />
+        </div>
+        <div class="form__item">
+          <h3 class="form__subtitle form__subtitle_snowflake">
+            Ваш email
+          </h3>
+          <input class="form__field" type="text" name="email" placeholder="Email" />
+        </div>
+        <div class="form__item">
+
+        
         <h3 class="form__subtitle">
           Откуда вы?
         </h3>
-        <select class="form__item form__country">
+        <select class="form__field form__country">
           <option class="form__country-item" value="Russia">Россия</option>
           <option class="form__country-item" value="USA">США</option>
         </select>
-        <div class="form__item">
+      </div>
+        <div class="form__field form__field_gender">
           <h3 class="form__subtitle">
             Ваш пол
           </h3>
@@ -167,9 +177,16 @@
           <input class="form__gender-item" type="radio" id="genderFemale" name="gender" value="female" />
           <label class="form__gender-item-text" for="genderFemale">Женский</label>
         </div>
-        <textarea class="form__item form__message" name="Message" id="" cols="30" rows="10"></textarea>
-        <input class="form__button" type="submit" value="Отправить" />
-      </form>
+      <div class="form__item">
+
+      
+        <h3 class="form__subtitle form__subtitle_snowflake">
+          Ваше сообщение
+        </h3>
+        <textarea class="form__field form__message" name="Message" id="" cols="30" rows="10"></textarea>
+      </div>
+        <input class="form__button button" type="submit" value="Отправить" />
+            </form>
     </div>
     <footer class="footer">
       <div class="conteiner">
