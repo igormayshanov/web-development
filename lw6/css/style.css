@@ -37,31 +37,58 @@
     float: left;  
 }
 
-.navigation__link 
+.navigation__li_about
 {
-    padding: 14px 20px 15px 20px;
-    height: 100%;
+    max-width: 140px;
+    width: 100%;
+    height: 100%; 
+}
+
+
+.navigation__link 
+{ 
+    
+    padding: 15px 20px 15px 46px; 
     text-decoration: none;
     font-size: 19px;
     color: #333333;
     font-family: Georgia;
+    background: url("img/css_sprites.png") no-repeat top; 
 }
 
-.navigation__link:hover 
+.navigation__link_about
+{
+    background: #15a98c url("img/css_sprites.png") no-repeat -3px -74px;
+    color: #f5f5f5; 
+    
+}
+
+.navigation__link_hobby:hover 
 {
     color: #f5f5f5;
-    background-color: #15a98c;
+    background: #15a98c;
 }
 
-.navigation__link_active
+.navigation__link_hobby
+{
+    background-position: -3px -139px;  
+}
+
+.navigation__link_hobby:hover
 {
     color: #f5f5f5;
-    background-color: #15a98c;
+    background: #15a98c url("img/css_sprites.png") no-repeat -3px -205px; 
 }
 
-i 
+.navigation__link_video
 {
-    padding-right: 10px;
+    background-position: -3px -271px;  
+}
+
+.navigation__link_video:hover
+{
+    color: #f5f5f5;
+    background: #15a98c url("img/css_sprites.png") no-repeat -3px -337px; 
 }
 
 .wrapper 
@@ -176,6 +203,7 @@ img[alt="photo"]
 
 .sidebar__title 
 {
+    padding: 2px 0 0 0;
     font-size: 24px;
     color: #15a98c;
     font-weight: 600;
@@ -206,6 +234,7 @@ img[alt="photo"]
 .block-description 
 {
     padding: 7px 0 0 0;
+    margin: 0 0 64px 0;
 }
 
 .block-description__text
@@ -263,12 +292,20 @@ img[alt="img"]
 {
     border-radius: 5px;
 }
+.columns-wrapper
+{
+    max-width: 1920;
+    width: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+}
 
 .columns 
 {
     max-width: 1200px;
     width: 100%;
-    margin: 97px 0 0 0; 
+    margin: 35px 0 0 0; 
     display: flex;
     flex-direction: column;  
 }
@@ -281,7 +318,7 @@ img[alt="img"]
 
 .columns__title 
 {
-    margin: 0 0 33px 0; 
+    margin: 0 0 31px 0; 
 }
 
 .columns__item
@@ -292,7 +329,7 @@ img[alt="img"]
 
 .columns__item:first-child
 {
-    padding: 0 10px 0 0;
+    padding: 0 10px 0 4px;
 }
 .columns__image 
 {
@@ -323,7 +360,7 @@ img[alt="img"]
 .columns__button 
 {
     align-self: center;
-    margin: 54px 0 105px 0;
+    margin: 54px 0 60px 0;
 }
 
 
@@ -343,14 +380,15 @@ img[alt="img"]
     padding: 22px 0 17px 0;  
 }
 
+
 .form 
 {
-    max-width: 960px;
+    max-width: 700px;
     width: 100%;
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 
 .form__title
@@ -360,7 +398,8 @@ img[alt="img"]
     color: #333333;
     font-weight: 300;
     font-family: "Open Sans", sans-serif;
-    margin: 0 0 69px 0;
+    margin: 46px 0 69px 0;
+    position: relative;
 }
 
 .form__title::before
@@ -369,7 +408,7 @@ img[alt="img"]
     position: absolute;
     width: 200px;
     height: 1px;
-    left: -234px;
+    left: -228px;
     top: 22px;
     background: gray;   
 }
@@ -380,9 +419,19 @@ img[alt="img"]
     position: absolute;
     width: 200px;
     height: 1px;
-    left: 234px;
+    left: 281px;
     top: 22px;
     background: gray;    
+}
+
+.form__column
+{
+    max-width: 540px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin: 0 0 48px 0   
 }
 
 .form__item
@@ -416,11 +465,18 @@ img[alt="img"]
     color: #333333;
     font-weight: 400;
     font-family: "Open Sans";
+    padding: 0 0 0 20px;
+}
+
+.form__field:focus
+{
+    border: 2px solid #15a98c;
 }
 
 .form__field_gender
 {
-    border: none;  
+    border: none; 
+    margin: 21px 0 0 0; 
 }
 
 .form__country 
@@ -430,16 +486,22 @@ img[alt="img"]
     color: #555555;
     font-weight: 400;
     font-family: "Open Sans";
-  
+    background: url("img/arrow_down.png") no-repeat;
+    background-position: 97% 50%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 .form__country-item 
 {
-    }
+
+}
 
 .form__gender-item 
 {
-    }
+
+}
 
 .form__gender-item-text 
 {
@@ -451,14 +513,26 @@ img[alt="img"]
     margin: 0 37px 0 0;
 }
 
+.form__subtitle_message
+{
+    padding: 54px 0 0 0;
+}
+
 .form__message 
 {
     height: 150px;
 }
 
-.form__button 
+.form__button
 {
-    }
+    margin: 19px 0 0 0;
+    align-self: flex-start;
+}
+
+.form__button_submit 
+{
+
+}
 
 .footer 
 {
