@@ -14,9 +14,10 @@
       <nav class="menu">
         <div class="conteiner">
           <ul class="navigation">
-            <li class="navigation__li navigation__li_about"><a
-                class="navigation__link navigation__link_about navigation__link_active" href="#">Обо
-                мне</a></li>
+            <li class="navigation__li navigation__li_about">
+              <a class="navigation__link navigation__link_about navigation__link_active" href="#">Обо
+                мне</a>
+            </li>
             <li class="navigation__li navigation__li_hobby"><a class="navigation__link navigation__link_hobby"
                 href="#">Мое
                 хобби</a></li>
@@ -33,7 +34,7 @@
             <img src="img/photo.png" alt="photo" />
           </div>
           <div class="top-block-text">
-            <blockquote class="top-block__text">
+            <blockquote class="top-block-text__text">
               <p class="top-block-text__quote">
                 Мы берем на себя много, потому что мало чего боимся
               </p>
@@ -45,46 +46,52 @@
               Jane Doe
             </h1>
           </div>
+        </div>
+        <div class="block-content">
+          <div class="block-sidebar">
+            <div class="block-sidebar__item">
+              <p class="sidebar__title">
+                Любимые писатели:
+              </p>
+              <ul class="sidebar__list sidebar__list_marker">
+                <li>Айзек Азимов</li>
+                <li>Говард Лавкрафт</li>
+                <li>Дмитрий Глуховский</li>
+                <li>Чак Паланик</li>
+              </ul>
+            </div>
+            <div class="block-sidebar__item">
+              <p class="sidebar__title">
+                Любимые фильмы:
+              </p>
+              <ol class="sidebar__list sidebar__list_number">
+                <li>Шоу Трумэна</li>
+                <li>Малхолланд Драйв</li>
+                <li>Семь жизней</li>
+                <li>Гравитация</li>
+              </ol>
+            </div>
+          </div>
+          <div class="block-description">
+            <p class="block-description__text">
+              В 1930-е годы прошлого века физик Джордж Гамоу из университета штата Колорадо начал публиковать
+              мини-сериал рассказов о неком мистере Томпкинсе, банковском клерке средних лет. Мистер Томпкинс, как
+              явствовало из этих историй, интересовался современной наукой.
+            </p>
+            <h2 class="block-description__title subtitle">Мое хобби</h2>
+            <p class="block-description__text">
+              Он регулярно посещал вечерние лекции местного профессора и, разумеется, всегда засыпал на самом интересном
+              месте.
+              А когда просыпался, то обнаруживал себя в каком-нибудь параллельном мире, где один из основных законов
+              физики действовал не так, как в его мире.
+            </p>
+            <span class="block-description__link link">
+              <a class="link__write-me" href="#"> Напиши мне </a>
+              &#8594
+            </span>
+          </div>
+        </div>
 
-        </div>
-        <div class="block-sidebar">
-          <p class="sidebar__title">
-            Любимые писатели:
-          </p>
-          <ul class="sidebar__list sidebar__list_marker">
-            <li>Айзек Азимов</li>
-            <li>Говард Лавкрафт</li>
-            <li>Дмитрий Глуховский</li>
-            <li>Чак Паланик</li>
-          </ul>
-          <p class="sidebar__title">
-            Любимые фильмы:
-          </p>
-          <ol class="sidebar__list sidebar__list_number">
-            <li>Шоу Трумэна</li>
-            <li>Малхолланд Драйв</li>
-            <li>Семь жизней</li>
-            <li>Гравитация</li>
-          </ol>
-        </div>
-        <div class="block-description">
-          <p class="block-description__text">
-            В 1930-е годы прошлого века физик Джордж Гамоу из университета штата Колорадо начал публиковать
-            мини-сериал рассказов о неком мистере Томпкинсе, банковском клерке средних лет. Мистер Томпкинс, как
-            явствовало из этих историй, интересовался современной наукой.
-          </p>
-          <h2 class="block-description__title subtitle">Мое хобби</h2>
-          <p class="block-description__text">
-            Он регулярно посещал вечерние лекции местного профессора и, разумеется, всегда засыпал на самом интересном
-            месте.
-            А когда просыпался, то обнаруживал себя в каком-нибудь параллельном мире, где один из основных законов
-            физики действовал не так, как в его мире.
-          </p>
-          <span class="block-description__link link">
-            <a class="link__write-me" href="#"> Напиши мне </a>
-            &#8594
-          </span>
-        </div>
         <span class="clear-fix"></span>
       </div>
       <div class="columns-wrapper">
@@ -93,57 +100,67 @@
             Любимые фильмы
           </h2>
           <div class="columns-row">
-            <div class="columns__item columns-item">
-              <img class="columns__image" src="img/The Shawshank Redemption.png" alt="img">
-              <h3 class="columns-item__title">
-                Побег из Шоушенка
-              </h3>
-              <p class="columns__text">
-                Успешный банкир Энди Дюфрейн обвинен в убийстве собственной жены и ее любовника. Оказавшись в тюрьме под
-                названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решетки. Каждый,
-                кто попадает в эти стены, становится их рабом до конца жизни. Но Энди, вооруженный живым умом и доброй
-                душой, отказывается мириться с приговором судьбы и начинает разрабатывать невероятно дерзкий план своего
-                освобождения.
-              </p>
+            <div class="columns-row__1">
+              <div class="columns__item columns-item">
+                <img class="columns__image" src="img/The Shawshank Redemption.png" alt="img">
+                <h3 class="columns-item__title">
+                  Побег из Шоушенка
+                </h3>
+                <p class="columns__text">
+                  Успешный банкир Энди Дюфрейн обвинен в убийстве собственной жены и ее любовника. Оказавшись в тюрьме
+                  под
+                  названием Шоушенк, он сталкивается с жестокостью и беззаконием, царящими по обе стороны решетки.
+                  Каждый,
+                  кто попадает в эти стены, становится их рабом до конца жизни. Но Энди, вооруженный живым умом и доброй
+                  душой, отказывается мириться с приговором судьбы и начинает разрабатывать невероятно дерзкий план
+                  своего
+                  освобождения.
+                </p>
+              </div>
+              <div class="columns__item columns-item">
+                <img class="columns__image" src="img/Awake.png" alt="img">
+                <h3 class="columns-item__title">
+                  Наркоз
+                </h3>
+                <p class="columns__text">
+                  Клай Бересфорд вынужден лечь под нож. Однако в процессе операции на сердце он неожиданно приходит в
+                  себя.
+                  Находясь в парализованном состоянии, будучи не в силах пошевелить ни рукой, ни ногой, он, тем не
+                  менее,
+                  чувствует каждое касание скальпеля к своей плоти.
+                </p>
+              </div>
             </div>
-            <div class="columns__item columns-item">
-              <img class="columns__image" src="img/Awake.png" alt="img">
-              <h3 class="columns-item__title">
-                Наркоз
-              </h3>
-              <p class="columns__text">
-                Клай Бересфорд вынужден лечь под нож. Однако в процессе операции на сердце он неожиданно приходит в
-                себя.
-                Находясь в парализованном состоянии, будучи не в силах пошевелить ни рукой, ни ногой, он, тем не менее,
-                чувствует каждое касание скальпеля к своей плоти.
-              </p>
-            </div>
-            <div class="columns__item columns-item">
-              <img class="columns__image" src="img/Insidious.png" alt="img">
-              <h3 class="columns-item__title">
-                Астрал
-              </h3>
-              <p class="columns__text">
-                Джош и Рене переезжают со своими детьми в новый дом, но не успевают толком распаковать вещи, как
-                начинаются странные события. Необъяснимо перемещаются предметы, в детской звучат странные звуки… Но в
-                настоящий ужас приходят родители, когда их десятилетний сын Далтон впадает в кому. Все усилия врачей в
-                больнице помочь мальчику безуспешны.
-              </p>
-            </div>
-            <div class="columns__item columns-item">
-              <img class="columns__image" src="img/Gravity.png" alt="img">
-              <h3 class="columns-item__title">
-                Гравитация
-              </h3>
-              <p class="columns__text">
-                Доктор Райан Стоун, блестящий специалист в области медицинского инжиниринга, отправляется в свою первую
-                космическую миссию под командованием ветерана астронавтики Мэтта Ковальски, для которого этот полет —
-                последний перед отставкой. Но во время, казалось бы, рутинной работы за бортом случается катастрофа.
-                Шаттл уничтожен, а Стоун и Ковальски остаются совершенно одни; они находятся в связке друг с другом, и
-                все, что они могут, — это двигаться по орбите в абсолютно черном пространстве без всякой связи с Землей
-                и
-                какой-либо надежды на спасение.
-              </p>
+            <div class="columns-row__2">
+              <div class="columns__item columns-item">
+                <img class="columns__image" src="img/Insidious.png" alt="img">
+                <h3 class="columns-item__title">
+                  Астрал
+                </h3>
+                <p class="columns__text">
+                  Джош и Рене переезжают со своими детьми в новый дом, но не успевают толком распаковать вещи, как
+                  начинаются странные события. Необъяснимо перемещаются предметы, в детской звучат странные звуки… Но в
+                  настоящий ужас приходят родители, когда их десятилетний сын Далтон впадает в кому. Все усилия врачей в
+                  больнице помочь мальчику безуспешны.
+                </p>
+              </div>
+              <div class="columns__item columns-item">
+                <img class="columns__image" src="img/Gravity.png" alt="img">
+                <h3 class="columns-item__title">
+                  Гравитация
+                </h3>
+                <p class="columns__text">
+                  Доктор Райан Стоун, блестящий специалист в области медицинского инжиниринга, отправляется в свою
+                  первую
+                  космическую миссию под командованием ветерана астронавтики Мэтта Ковальски, для которого этот полет —
+                  последний перед отставкой. Но во время, казалось бы, рутинной работы за бортом случается катастрофа.
+                  Шаттл уничтожен, а Стоун и Ковальски остаются совершенно одни; они находятся в связке друг с другом, и
+                  все, что они могут, — это двигаться по орбите в абсолютно черном пространстве без всякой связи с
+                  Землей
+                  и
+                  какой-либо надежды на спасение.
+                </p>
+              </div>
             </div>
           </div>
           <button class="columns__button button" href="#">
@@ -190,7 +207,7 @@
             <h3 class="form__subtitle form__subtitle_snowflake form__subtitle_message">
               Ваше сообщение
             </h3>
-            <textarea class="form__field form__message" name="Message" id="" cols="30" rows="10"></textarea>
+            <textarea class="form__field form__message" name="Message" id="" cols="30" rows="8"></textarea>
           </div>
           <div class="form__button">
             <input class="form__button_submit button" type="submit" value="Отправить" />
@@ -199,12 +216,10 @@
     </div>
   </div>
   <footer class="footer">
-    <div class="conteiner">
-      <div class="footer__row">
-        <p class="footer__text">
-          © 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»
-        </p>
-      </div>
+    <div class="footer__row">
+      <p class="footer__text">
+        © 2006-2018 Поволжский государственный технологический университет, ФГБОУ ВО «ПГТУ»
+      </p>
     </div>
   </footer>
   </div>
