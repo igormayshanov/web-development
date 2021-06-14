@@ -194,7 +194,6 @@ ORDER BY
     Фамилия, Имя;
     
 /* Запрос для получения всех студентов из конкретного факультета*/
-
 SELECT
     student.student_id AS 'Код',
     student.last_name AS 'Фамилия',
@@ -211,7 +210,7 @@ ON
 LEFT JOIN
     faculty
 ON
-    study_group.group_id = faculty.faculty_id        
+    study_group.faculty_id = faculty.faculty_id        
 WHERE
     faculty.faculty_name = 'Радиотехнический факультет'
 ORDER BY 
