@@ -181,12 +181,16 @@
 {
     margin: 19px 0 0 0;
     align-self: flex-start;
+    display: flex;
+    flex-direction: row;
 }
+
 
 .form__feedback
 {
     color: #28ad3e;
     font: 400 22px "Open Sans";
+    margin: 9px 0 0 20px;
 }
 
 .form__errors

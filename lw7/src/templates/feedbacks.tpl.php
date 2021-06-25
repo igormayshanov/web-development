@@ -33,7 +33,7 @@
             <p class="feedbacks-list__row">Сообщение: <?php echo $args["answer"][4]; ?></p>
         <?php endif; ?>
         <?php if (isset($args["error"])) : ?>
-            <div class="form__answers"><?php echo $args["error"]; ?></div>
+            <div class="feedbacks-list__row"><?php echo $args["error"]; ?></div>
         <?php endif; ?>
     </div>
 </body>
