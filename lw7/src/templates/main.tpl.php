@@ -1,20 +1,19 @@
-<?php
-
-?>
-
+<!-- в случае неправильных данных должен рендериться шаблон main с информацией об ошибках, в случае правильных 
+данных, данные должны сохраняться и должен рендериться шаблон main с 
+информацией о том что данные сохранены  -->
 
 <!DOCTYPE html>
 <html lang="ru">
 
 <head>
-  <title>About me</title>
+  <title>Напиши мне</title>
   <meta charset="utf-8">
-  <meta name="description" content="About me">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" type="text/css" href="../../web/css/style.css" />
 </head>
 
 <body>
-  <form class="form" method="POST" action="">
+  <form class="form" method="post">
     <h2 class="form__title">
       НАПИШИ МНЕ
     </h2>
@@ -23,19 +22,25 @@
         <h3 class="form__subtitle form__subtitle_snowflake">
           Ваше имя
         </h3>
-        <input class="form__field" type="text" name="first-name" placeholder=" " />
+        <?php if (isset($args["errors"]["name"])) : ?>
+          <label class="form__errors"><?php echo $args["errors"]["name"]; ?></label>
+        <?php endif; ?>
+        <input class="form__field" type="text" name="name" placeholder=" " required value=" <?php echo $args["fields"]["name"] ?? ""; ?>" />
       </div>
       <div class="form__item">
         <h3 class="form__subtitle form__subtitle_snowflake">
           Ваш email
         </h3>
-        <input class="form__field" type="email" name="email" placeholder="" />
+        <?php if (isset($args["errors"]["email"])) : ?>
+          <label class="form__errors"><?php echo $args["errors"]["email"]; ?></label>
+        <?php endif; ?>
+        <input class="form__field" type="email" name="email" placeholder="" required value="<?php echo $args["fields"]["email"] ?? ""; ?>" />
       </div>
       <div class="form__item">
         <h3 class="form__subtitle">
           Откуда вы?
         </h3>
-        <select class="form__field form__country">
+        <select class="form__field form__country" name="country">
           <option class="form__country-item" value="Russia">Россия</option>
           <option class="form__country-item" value="USA">США</option>
         </select>
@@ -53,10 +58,16 @@
         <h3 class="form__subtitle form__subtitle_snowflake form__subtitle_message">
           Ваше сообщение
         </h3>
-        <textarea class="form__field form__message" name="Message" id="" cols="30" rows="10"></textarea>
+        <?php if (isset($args["errors"]["message"])) : ?>
+          <label class="form__errors"><?php echo $args["errors"]["message"]; ?></label>
+        <?php endif; ?>
+        <textarea class="form__field form__message" name="message" id="" cols="30" rows="10"><?php echo $args["fields"]["message"] ?? ""; ?></textarea>
       </div>
       <div class="form__button">
         <input class="form__button_submit button" type="submit" value="Отправить" />
+        <?php if (isset($args["sent"])) : ?>
+          <p class="form__feedback"><?php echo $args["sent"]; ?></p>
+        <?php endif; ?>
       </div>
   </form>
 </body>
