@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <form class="form" method="post">
+    <form class="form__body" method="post">
         <h2 class="form__title">
             Показать ответы
         </h2>

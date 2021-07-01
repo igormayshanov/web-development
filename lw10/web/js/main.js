@@ -1,7 +1,6 @@
-function initAjaxForm() {
+function submitFormAjax() {
   // получаем объект формы
   const form = document.getElementById('form');
-  sendOk.style.display = 'none';
 
   form.addEventListener('submit', formSend);
 
@@ -29,7 +28,12 @@ function initAjaxForm() {
       formRemoveError(email);
       formRemoveError(message);
       if (result.send != false) {
+        form.classList.add('_sending');
+        nameError.textContent = "";
+        emailError.textContent = "";
+        messageError.textContent = "";
         sendOk.style.display = 'block';
+        form.reset();
       }
       else {
         sendOk.style.display = 'none';
@@ -55,61 +59,9 @@ function initAjaxForm() {
 }
 
 function formAddError(input) {
-  //input.parentElement.classList.add('_error');
   input.classList.add('_error');
 }
 function formRemoveError(input) {
-  //input.parentElement.classList.remove('_error');
   input.classList.remove('_error');
 }
-window.onload = initAjaxForm();
-
-
-/*
-  form.onsubmit = async (event) => {
-    event.preventDefault();
-    let sendOk = document.getElementById('sendOk');
-    let nameError = document.getElementById('nameError');
-    let emailError = document.getElementById('emailError');
-    let messageError = document.getElementById('messageError');
-
-    let name = document.getElementById('name');
-    let email = document.getElementById('email');
-    let message = document.getElementById('message');
-
-    let response = await fetch(form.action, {
-      method: 'POST',
-      body: new FormData(form)
-    });
-
-    if (response.ok) {
-      let json = await response.json();
-    } else {
-      alert("Ошибка HTTP: " + response.status);
-    }
-
-    name.classList.remove("form__input_text__error");
-    email.classList.remove("form__input_email__error");
-    message.classList.remove("form__textarea__error");
-    if (json.errors) {
-      sendOk.style.display = 'block';
-    }
-    else {
-      sendOk.style.display = 'none';
-      if (json.errors.name != '') {
-        nameError.textContent = json.errors.name;
-        name.classList.add("form__input_text__error");
-      }
-      if (json.errors.email != '') {
-        email.classList.add("form__input_email__error");
-        emailError.textContent = json.errors.email;
-      }
-      if (json.errors.message != '') {
-        messageError.textContent = json.errors.message;
-        message.classList.add("form__textarea__error");
-      }
-    }
-  }
-  */
-
-
+window.onload = submitFormAjax();

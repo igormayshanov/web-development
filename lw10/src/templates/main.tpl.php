@@ -21,7 +21,6 @@
         </h3>
         <input class="form__field _required" type="text" id="name" name="name" placeholder=" " value="<?php echo $args["fields"]["name"] ?? ""; ?>" />
         <span id="nameError" class="form__error"></span>
-
       </div>
       <div class="form__item">
         <h3 class="form__subtitle form__subtitle_snowflake">
